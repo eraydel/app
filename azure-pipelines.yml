@@ -24,9 +24,9 @@ steps:
   displayName: 'Get latest CodeQL package. Install on Agent.'
  
 - script: |
-   ./codeql-runner-linux init --repository octodemo/ghas-azure-devops-code-scanning --github-url https://github.com --github-auth https://github.com/eraydel/app.git
+   ./codeql-runner-linux init --repository octodemo/ghas-azure-devops-code-scanning --github-url https://github.com --github-auth a129a3b04ef191d002176584f6ba3bc05b9df8bd
   displayName: 'Initialize CodeQ Executable and create a CodeQL database'
  
 - script: |
-   ./codeql-runner-linux analyze --repository octodemo/ghas-azure-devops-code-scanning --github-url https://github.com --github-auth https://github.com/eraydel/app.git --commit 92065de8b22bbfeda511d12571b66c9969ff593b --ref refs/heads/master
+   ./codeql-runner-linux analyze --repository octodemo/ghas-azure-devops-code-scanning --github-url https://github.com --github-auth a129a3b04ef191d002176584f6ba3bc05b9df8bd --commit 92065de8b22bbfeda511d12571b66c9969ff593b --ref refs/heads/master
   displayName: 'Populate the CodeQL runner databases, analyze them, and upload the results to GitHub.'
