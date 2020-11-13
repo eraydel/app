@@ -28,5 +28,5 @@ steps:
   displayName: 'Initialize CodeQ Executable and create a CodeQL database'
  
 - script: |
-   ./codeql-runner-linux analyze --repository eraydel/app --github-url https://github.com --github-auth $(GITHUB_PAT) --commit 43b36813be02030f88518371ddd4bc942d267bf2 --ref refs/heads/master
+   ./codeql-runner-linux analyze --repository eraydel/app --github-url https://github.com --github-auth $(GITHUB_PAT) --commit 43b36813be02030f88518371ddd4bc942d267bf2 --ref refs/heads/main
   displayName: 'Populate the CodeQL runner databases, analyze them, and upload the results to GitHub.'
