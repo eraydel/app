@@ -24,9 +24,9 @@ steps:
   displayName: 'Get latest CodeQL package. Install on Agent.'
  
 - script: |
-   ./codeql-runner-linux init --repository eraydel/app --github-url https://github.com --github-auth e404f8f2c447b078e05a9284d2b13dc0a1330eaa
+   ./codeql-runner-linux init --repository eraydel/app --github-url https://github.com --github-auth 249ef5364e2701e81d7a1827b983c99cd151457c
   displayName: 'Initialize CodeQ Executable and create a CodeQL database'
  
 - script: |
-   ./codeql-runner-linux analyze --repository eraydel/app --github-url https://github.com --github-auth e404f8f2c447b078e05a9284d2b13dc0a1330eaa --commit 43b36813be02030f88518371ddd4bc942d267bf2 --ref refs/heads/master
+   ./codeql-runner-linux analyze --repository eraydel/app --github-url https://github.com --github-auth 249ef5364e2701e81d7a1827b983c99cd151457c --commit 43b36813be02030f88518371ddd4bc942d267bf2 --ref refs/heads/master
   displayName: 'Populate the CodeQL runner databases, analyze them, and upload the results to GitHub.'
